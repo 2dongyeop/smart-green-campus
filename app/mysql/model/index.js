@@ -1,4 +1,4 @@
-const dbConfig = require('../config/config.ts');
+const dbConfig = require('../config/config.js');
 const Sequelize = require('sequelize');
 
 const sequelizeConfig = new Sequelize(
@@ -21,6 +21,6 @@ const sequelizeConfig = new Sequelize(
 const db = {};
 db.sequelize = Sequelize;
 db.sequelizeConfig = sequelizeConfig;
-db.tutorial = require('./model.js')(sequelizeConfig, Sequelize);
+db.sensor = require('./model.js')(sequelizeConfig, Sequelize);
 
 module.exports = db;
