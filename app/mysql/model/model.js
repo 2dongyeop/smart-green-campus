@@ -6,10 +6,12 @@ module.exports = (sequelizeConfig, Sequelize) => {
             value: {
                 type: Sequelize.DOUBLE,
                 allowNull: false,
+                // unique: true,
             },
             create_at: {
                 type: Sequelize.DATE,
                 allowNull: false,
+                defaultValue: Sequelize.NOW,
             }
         }
     );
