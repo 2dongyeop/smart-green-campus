@@ -14,7 +14,8 @@ exports.create = (req, res) => {
 
     // Set tutorial
     const sensor = {
-        name: req.body.name,
+        sensor_name: req.body.sensor_name,
+        location: req.body.location,
         value: req.body.value
     };
 

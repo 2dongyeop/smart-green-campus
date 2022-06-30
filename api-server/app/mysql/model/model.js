@@ -7,6 +7,10 @@ module.exports = (sequelizeConfig, Sequelize) => {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
+            location : {
+                type: Sequelize.STRING,
+                allowNull: false,
+            },
             value: {
                 type: Sequelize.DOUBLE,
                 allowNull: false,
