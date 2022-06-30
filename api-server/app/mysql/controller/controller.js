@@ -5,9 +5,9 @@ const Op = db.sequelize.Op;
 // Create tutorial
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.value) {
+    if (!req.body.value || !req.body.sensor_name || !req.body.location) {
         res.status(400).send({
-            message: 'Value is empty!'
+            message: 'Information is empty!'
         });
         return;
     }
