@@ -1,3 +1,6 @@
+
+//node.js에서 mqtt를 다룰 때 사용되는 메소드들을 정리합니다.
+
 const mqtt = require('mqtt'); //모듈 불러오기
 
 const client = mqtt.connect(url, options); //연결하기
