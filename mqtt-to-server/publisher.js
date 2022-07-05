@@ -14,5 +14,5 @@ setInterval(
 
         client.publish("green-campus/sensors",JSON.stringify(message));
     },
-    1000000
+    2000
 );
