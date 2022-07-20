@@ -12,6 +12,13 @@ exports.create = (req, res) => {
         return;
     }
 
+    //온도가 35도가 넘어가면 경고 발생
+    if (req.body.sensor_name == "temperature" && req.body.value >= 35) {
+        res.status(400).send({
+            message: "폭염 주의보 발령!!"
+        });
+    }
+
     // Set tutorial
     const sensor = {
         sensor_name: req.body.sensor_name,
