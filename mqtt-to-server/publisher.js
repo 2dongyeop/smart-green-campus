@@ -3,9 +3,9 @@ const mqtt = require('mqtt');
 const client = mqtt.connect('mqtt://broker.hivemq.com')
 
 var message = {
-    "sensor_name": "temperature",
-    "location": "N13",
-    "value": 26
+    "sensor_name": "humudity",
+    "location": "N8",
+    "value": 80
 }
 
 setInterval(
@@ -14,5 +14,6 @@ setInterval(
 
         client.publish("green-campus/sensors",JSON.stringify(message));
     },
+
     2000
 );
