@@ -1,7 +1,7 @@
 const db = require('../model/index.js');
 const Sensor = db.sensor;
 const Op = db.sequelize.Op;
-const mailer = require('././nodemailer/routes/mail');
+const mailer = require('../../../nodemailer//routes/mail');
 
 // Create tutorial
 exports.create = (req, res) => {
