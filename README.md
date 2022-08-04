@@ -45,7 +45,7 @@ module.exports = {
 <br/>
 
 - api-server/nodemailer/config/senderInfo.json
-```javascript
+```JSON
 {
   "user": "사용할 이메일 계정",
   "pass": "계정 비밀번호"
