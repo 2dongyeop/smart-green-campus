@@ -17,9 +17,51 @@
 >
 > 이후 Web에서 데이터들을 볼 수 있는 화면도 구축할 예정입니다.
 
+<br/>
+
+### 세팅
+> 본 프로그램은 nodejs 16.16.0 version을 이용합니다.
+>
+> 개인 정보를 위해 ignore된 파일들은 아래에 표시합니다.
+
+<br/>
+
+- api-server/app/mysql/config/config.js
+```javascript
+module.exports = {
+    host: 'localhost',
+    username: 'root',
+    password: 'password',
+    db: 'database name',
+    dialect: 'mysql',
+    pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+    }
+};
+```
+<br/>
+
+- api-server/nodemailer/config/senderInfo.json
+```javascript
+{
+  "user": "사용할 이메일 계정",
+  "pass": "계정 비밀번호"
+}
+```
+
+<br/>
 
 -----
 ### 진행 상황
+#### 22/08/04
+- Firebase가 아닌 nodemailer 모듈을 이용해, 센싱 값이 이상하다고 판단되면, 메일을 보내 알리는 기능을 추가하였습니다.
+
+
+<br/>
+
 #### 22/07/26
 - 직접 아두이노에 온도센서를 연결해 값을 측정하고, MQTT로 보내는 과정을 해봅니다.
 - Firebase를 이용해 센싱 값이 이상하다고 판단되면, 알림을 보내는 과정을 연습합니다.
