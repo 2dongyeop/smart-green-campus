@@ -16,12 +16,13 @@ exports.create = (req, res) => {
     //온도가 35도가 넘어가면 경고 발생 -> 콘솔창이 아닌 페이지에서 볼 수 있도록
     if (req.body.sensor_name == "temperature" && req.body.value >= 35) {
 
+        const temp = req.body.value;
         const emailParam = {
             toEmail: '20181676@edu.hanbat.ac.kr',
 
             subject: 'temperature problem occur',
 
-            text: '온도가 너무 높습니다.'
+            text: `경고!! 온도가 ${temp}도로 너무 높습니다.`
         };
 
         mailer.sendMail(emailParam);
