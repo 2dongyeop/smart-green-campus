@@ -58,7 +58,7 @@ module.exports = {
 ### 진행 상황
 #### 22/08/04
 - Firebase가 아닌 nodemailer 모듈을 이용해, 센싱 값이 이상하다고 판단되면, 메일을 보내 알리는 기능을 추가하였습니다.
-
+    - nodemailer의 동작 방식은 [레포](https://github.com/2dongyeop/node-mailer) 혹은 [블로그](https://velog.io/@dongvelop/NodeJs-nodemailer-%EB%AA%A8%EB%93%88-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0)를 통해 설명합니다.
 
 <br/>
 
