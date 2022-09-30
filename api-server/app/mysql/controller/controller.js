@@ -50,7 +50,6 @@ exports.create = (req, res) => {
 
 // Retrieve all tutorials
 exports.findAll = (req, res) => {
-    const value = req.query.value;
     let condition = { where: {} };
 
     Sensor
