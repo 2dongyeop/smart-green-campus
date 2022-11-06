@@ -1,17 +1,19 @@
 # smart-green-campus
-### 프로젝트 설명
+## 💡 프로젝트 설명
 다학제간 캡스톤 디자인에서 진행한 프로젝트로, 22년도 상반기부터 시작하였습니다.
 
 스마트 그린 캠퍼스의 데이터를 관리하는 서비스를 만들어 봅니다.
 
 <br/>
 
-### 동작 과정
->  건축공학과(기타 등등)에서 각종 데이터(강수량, 전기 발전량 등등..)을 측정합니다.
+<br/>
+
+## 💡 Overview
+> 건축공학과 : 각종 데이터(강수량, 전기 발전량 등등..)을 측정합니다.
 >
-> 컴퓨터공학과에서는 각 학과에서 센싱한 데이터들을 MQTT protocol을 이용해 publish합니다.
+> 컴퓨터공학과 : 각 학과에서 센싱한 데이터들을 MQTT protocol을 이용해 publish합니다.
 >
-> 정보통신공학과에서는 MQTT broker로부터 subscribe한 데이터를 받아, API server에 전달합니다.
+> 정보통신공학과 : MQTT broker로부터 subscribe한 데이터를 받아, API server에 전달합니다.
 >
 > 요청을 받은 API server는 Database에 접근하여 동작합니다.
 >
@@ -19,43 +21,18 @@
 
 <br/>
 
-### 세팅
-> 본 프로그램은 nodejs 16.16.0 version을 이용합니다.
->
-> 개인 정보를 위해 ignore된 파일들은 아래에 표시합니다.
+<br/>
+
+## 💡 Document
+- [API 설계도](https://github.com/2dongyeop/smart-green-campus/blob/main/document/API-list.md)
+- [Setting file](https://github.com/2dongyeop/smart-green-campus/blob/main/document/setting.md)
+
 
 <br/>
 
-- api-server/app/mysql/config/config.js
-```javascript
-module.exports = {
-    host: 'localhost',
-    username: 'root',
-    password: 'password',
-    db: 'database name',
-    dialect: 'mysql',
-    pool: {
-        max: 5,
-        min: 0,
-        acquire: 30000,
-        idle: 10000
-    }
-};
-```
 <br/>
 
-- api-server/nodemailer/config/senderInfo.json
-```JSON
-{
-  "user": "사용할 이메일 계정",
-  "pass": "계정 비밀번호"
-}
-```
-
-<br/>
-
------
-### 진행 상황
+## 💡 진행 상황
 #### 22/08/04
 - Firebase 사용법에 어려움을 겪어 우선 nodemailer 모듈을 이용해, 센싱 값이 이상하다고 판단되면, 메일을 보내 알리는 기능을 추가하였습니다.
     - nodemailer의 동작 방식은 [레포](https://github.com/2dongyeop/node-mailer) 혹은 [블로그](https://velog.io/@dongvelop/NodeJs-nodemailer-%EB%AA%A8%EB%93%88-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0)를 통해 설명합니다.
